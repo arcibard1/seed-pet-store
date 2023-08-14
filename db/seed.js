@@ -37,10 +37,8 @@ const createTables = async() => {
 
 const createOwner = async(ownersName) => {
   try {
-    await client.query(`
-      INSERT INTO owners (Name)
-      VALUES ('${ownersName}');
-    `);
+    await client.query(
+       `INSERT INTO owners (Nam) VALUES ($1)`);
 
     console.log('OWNER CREATED');
   } catch(error) {
